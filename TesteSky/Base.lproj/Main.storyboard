@@ -45,7 +45,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="doctor" translatesAutoresizingMaskIntoConstraints="NO" id="EnK-YE-bQq">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="EnK-YE-bQq">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="170"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="170" id="D54-fa-d6a"/>
@@ -104,7 +104,4 @@
             <point key="canvasLocation" x="131.25" y="138.38028169014083"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="doctor" width="1920" height="1080"/>
-    </resources>
 </document>

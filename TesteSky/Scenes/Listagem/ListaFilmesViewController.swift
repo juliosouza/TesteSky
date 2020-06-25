@@ -97,7 +97,7 @@ extension ListaFilmesViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width  = (view.frame.width/2) - 25
-        return CGSize(width: width, height: 215)
+        return CGSize(width: width, height: 225)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -110,8 +110,9 @@ extension ListaFilmesViewController: UICollectionViewDataSource, UICollectionVie
         
         cell.labelMovie.text = list[indexPath.row].title
         cell.imageMovie.layer.cornerRadius = 10
-        
-//        let collection = list[indexPath.row]
+        cell.imageMovie.download(from: list[indexPath.row].cover_url)
+        cell.imageMovie.contentMode = .scaleAspectFill
+//        cell.imageMovie.download(from: "https://image.tmdb.org/t/p/original/vbCjcID53aG5njDk9lZqCLLH0tu.jpg")
         
         return cell
     }

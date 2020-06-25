@@ -21,6 +21,7 @@
 		F7FDB59A24A183380076EFB0 /* ListaFilmesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB59424A183380076EFB0 /* ListaFilmesViewController.swift */; };
 		F7FDB59B24A183380076EFB0 /* ListaFilmesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB59524A183380076EFB0 /* ListaFilmesInteractor.swift */; };
 		F7FDB59F24A4226C0076EFB0 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB59E24A4226C0076EFB0 /* MovieCollectionViewCell.swift */; };
+		F7FDB5A224A43CA40076EFB0 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB5A124A43CA40076EFB0 /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F7FDB59424A183380076EFB0 /* ListaFilmesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaFilmesViewController.swift; sourceTree = "<group>"; };
 		F7FDB59524A183380076EFB0 /* ListaFilmesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaFilmesInteractor.swift; sourceTree = "<group>"; };
 		F7FDB59E24A4226C0076EFB0 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		F7FDB5A124A43CA40076EFB0 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		F7FDB57124A14F330076EFB0 /* TesteSky */ = {
 			isa = PBXGroup;
 			children = (
+				F7FDB5A024A43C920076EFB0 /* Extensions */,
 				F7FDB58924A150BB0076EFB0 /* Manager */,
 				F7FDB58C24A151440076EFB0 /* Utils */,
 				F7FDB59C24A18D0A0076EFB0 /* Scenes */,
@@ -129,6 +132,14 @@
 			children = (
 			);
 			path = Detalhes;
+			sourceTree = "<group>";
+		};
+		F7FDB5A024A43C920076EFB0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7FDB5A124A43CA40076EFB0 /* ImageView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FDB5A224A43CA40076EFB0 /* ImageView.swift in Sources */,
 				F7FDB59824A183380076EFB0 /* ListaFilmesRouter.swift in Sources */,
 				F7FDB59724A183380076EFB0 /* ListaFilmesWorker.swift in Sources */,
 				F7FDB59A24A183380076EFB0 /* ListaFilmesViewController.swift in Sources */,
