@@ -17,8 +17,16 @@ protocol DetalheDisplayLogic: class {
 }
 
 class DetalheViewController: UIViewController, DetalheDisplayLogic {
+    
+    // MARK - Variáveis
+    
     var interactor: DetalheBusinessLogic?
     var router: (NSObjectProtocol & DetalheRoutingLogic & DetalheDataPassing)?
+    
+    // MARK - Outlets
+    
+    @IBOutlet weak var imageMovieDetalhe: UIImageView!
+    
     
     // MARK: Object lifecycle
     
@@ -47,16 +55,7 @@ class DetalheViewController: UIViewController, DetalheDisplayLogic {
         router.dataStore = interactor
     }
     
-    // MARK: Routing
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
+
     
     var detalhe: ListaFilmes.Filme?
     
@@ -64,7 +63,6 @@ class DetalheViewController: UIViewController, DetalheDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        doSomething()
         print(detalhe)
     }
     
