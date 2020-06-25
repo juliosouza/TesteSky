@@ -14,18 +14,18 @@ import UIKit
 
 enum ListaFilmes
 {
-  // MARK: Use cases
+    // MARK: Use cases
     
     typealias Response = [Filme]
     
     struct Filme: Codable {
         let title: String
-            let overview: String
-            let duration: String
-            let release_year: Int
-            let cover_url: String
-            let backdrops_url: [String]
-            let id: String
+        let overview: String
+        let duration: String
+        let release_year: String
+        let cover_url: String
+        let backdrops_url: [String]
+        let id: String
     }
     
     struct Request {
@@ -44,7 +44,7 @@ extension ListaFilmes.ListaFilmesAPI: Endpoint {
     
     var path: String {
         switch self {
-        case .get: return Constants.baseURL
+        case .get: return Constants.movies
         }
     }
 }

@@ -10,6 +10,6 @@ import Foundation
 
 struct Constants {
     
-    static let baseURL:String = "https://sky-exercise.herokuapp.com/api/Movies"
-    
+    static let baseURL:String = "https://sky-exercise.herokuapp.com/api"
+    static let movies: String = "/Movies"
 }

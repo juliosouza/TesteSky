@@ -27,9 +27,9 @@ class ListaFilmesInteractor: ListaFilmesBusinessLogic, ListaFilmesDataStore
     var worker: ListaFilmesWorker?
 
     func carregarListaInicialFilmes() {
-        
+        worker = ListaFilmesWorker()
         let request = ListaFilmes.Request(service: .get)
-        
+        print("chegou na interactor")
         worker?.getListaFilmes(request: request, completion: { (result) in
             switch result {
             case .success(let response):
@@ -37,9 +37,11 @@ class ListaFilmesInteractor: ListaFilmesBusinessLogic, ListaFilmesDataStore
                     print("response nil")
                     self.presenter?.presentDefaultError()
                     return }
+                print("sucesso interactor")
                 self.presenter?.presentList(response: resp)
             case .failure(let error):
                 print(error.localizedDescription)
+                print("erro interactor")
                 self.presenter?.presentDefaultError()
             }
         })

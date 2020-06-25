@@ -20,6 +20,7 @@
 		F7FDB59924A183380076EFB0 /* ListaFilmesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB59324A183380076EFB0 /* ListaFilmesModels.swift */; };
 		F7FDB59A24A183380076EFB0 /* ListaFilmesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB59424A183380076EFB0 /* ListaFilmesViewController.swift */; };
 		F7FDB59B24A183380076EFB0 /* ListaFilmesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB59524A183380076EFB0 /* ListaFilmesInteractor.swift */; };
+		F7FDB59F24A4226C0076EFB0 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB59E24A4226C0076EFB0 /* MovieCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F7FDB59324A183380076EFB0 /* ListaFilmesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaFilmesModels.swift; sourceTree = "<group>"; };
 		F7FDB59424A183380076EFB0 /* ListaFilmesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaFilmesViewController.swift; sourceTree = "<group>"; };
 		F7FDB59524A183380076EFB0 /* ListaFilmesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaFilmesInteractor.swift; sourceTree = "<group>"; };
+		F7FDB59E24A4226C0076EFB0 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				F7FDB59324A183380076EFB0 /* ListaFilmesModels.swift */,
 				F7FDB59424A183380076EFB0 /* ListaFilmesViewController.swift */,
 				F7FDB59524A183380076EFB0 /* ListaFilmesInteractor.swift */,
+				F7FDB59E24A4226C0076EFB0 /* MovieCollectionViewCell.swift */,
 			);
 			path = Listagem;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				F7FDB58B24A150FB0076EFB0 /* ApiManager.swift in Sources */,
 				F7FDB57324A14F330076EFB0 /* AppDelegate.swift in Sources */,
 				F7FDB59624A183380076EFB0 /* ListaFilmesPresenter.swift in Sources */,
+				F7FDB59F24A4226C0076EFB0 /* MovieCollectionViewCell.swift in Sources */,
 				F7FDB59B24A183380076EFB0 /* ListaFilmesInteractor.swift in Sources */,
 				F7FDB57524A14F330076EFB0 /* SceneDelegate.swift in Sources */,
 			);

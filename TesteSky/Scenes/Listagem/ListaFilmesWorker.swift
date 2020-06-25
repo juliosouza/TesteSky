@@ -30,9 +30,12 @@ class ListaFilmesWorker: APIClient {
         var request = endpoint.request
         request.url = URL(string: request.url!.absoluteString.removingPercentEncoding!)
         request.httpMethod = "get"
-        
+        print("abriu worker")
         fetch(with: request, decode: { json -> ListaFilmes.Response? in
-            guard let feedResult = json as? ListaFilmes.Response else { return  nil }
+            guard let feedResult = json as? ListaFilmes.Response else {
+                print("retornou nada")
+                return  nil }
+            print("retornou worker")
             return feedResult
         }, completion: completion)
     }

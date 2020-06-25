@@ -13,19 +13,25 @@
 import UIKit
 
 protocol ListaFilmesPresentationLogic {
+    func presentList(response: ListaFilmes.Response)
     func presentDefaultError()
     
 }
 
 class ListaFilmesPresenter: ListaFilmesPresentationLogic
 {
-  weak var viewController: ListaFilmesDisplayLogic?
-  
-  // MARK: Do something
-  
-//  func presentSomething(response: ListaFilmes.Something.Response)
-//  {
-//    let viewModel = ListaFilmes.Something.ViewModel()
-//    viewController?.displaySomething(viewModel: viewModel)
-//  }
+    weak var viewController: ListaFilmesDisplayLogic?
+    
+    
+    
+    func presentList(response: ListaFilmes.Response) {
+
+        viewController?.exibirListaFilmes(response: response)
+    }
+    
+    
+    func presentDefaultError() {
+        
+    }
+
 }
