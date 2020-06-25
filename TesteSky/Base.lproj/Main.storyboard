@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ufW-D1-0fB">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -17,19 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cine SKY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5l0-MW-MqK">
-                                <rect key="frame" x="124.5" y="32" width="71" height="21"/>
+                                <rect key="frame" x="124.5" y="60" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uma seleção de filmes imperdiveis" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAy-J9-rkO">
-                                <rect key="frame" x="16" y="77" width="288" height="13.5"/>
+                                <rect key="frame" x="16" y="105" width="288" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.6588235294" green="0.74509803919999995" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2o0-Ps-FyP">
-                                <rect key="frame" x="20" y="106.5" width="280" height="461.5"/>
+                                <rect key="frame" x="20" y="134.5" width="280" height="433.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="d3p-1t-KwJ">
                                     <size key="itemSize" width="128" height="200"/>
@@ -83,7 +83,7 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="5l0-MW-MqK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="4Oe-pg-Ufy"/>
+                            <constraint firstItem="5l0-MW-MqK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="4Oe-pg-Ufy"/>
                             <constraint firstItem="iAy-J9-rkO" firstAttribute="top" secondItem="5l0-MW-MqK" secondAttribute="bottom" constant="24" id="GeN-Lb-jA1"/>
                             <constraint firstItem="2o0-Ps-FyP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Kua-2F-UNa"/>
                             <constraint firstItem="5l0-MW-MqK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ozj-JY-8G7"/>
@@ -95,11 +95,49 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hZb-nu-AqC"/>
                     <connections>
                         <outlet property="collectionMovies" destination="2o0-Ps-FyP" id="GBf-Vu-ilC"/>
+                        <segue destination="meJ-nJ-SVb" kind="show" identifier="Detalhe" id="oGb-7X-eag"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128.75" y="138.38028169014083"/>
+        </scene>
+        <!--Detalhe-->
+        <scene sceneID="chh-cj-xVz">
+            <objects>
+                <viewController id="meJ-nJ-SVb" customClass="DetalheViewController" customModule="TesteSky" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nbV-ga-hEM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="GZN-Zc-r1r"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detalhe" id="3Bt-al-Csy">
+                        <barButtonItem key="backBarButtonItem" title=" " id="wuc-63-Rbc"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fs5-y5-COU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038.125" y="138.38028169014083"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7P6-Lq-E2M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ufW-D1-0fB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eQn-xX-3sS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oC7-2A-wrv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVP-63-p1L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.25" y="138.38028169014083"/>
         </scene>

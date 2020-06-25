@@ -56,25 +56,34 @@ class ListaFilmesViewController: UIViewController, ListaFilmesDisplayLogic {
     
     // MARK: Routing
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "Detalhe" {
+            if let destination = segue.destination as? DetalheViewController {
+                if let object = sender as? ListaFilmes.Filme {
+                    destination.detalhe = object
+                }
             }
         }
     }
     
     // MARK: View lifecycle
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         carregaListaInicialFilmes()
         
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
     }
     
     // MARK: Methods
@@ -115,6 +124,10 @@ extension ListaFilmesViewController: UICollectionViewDataSource, UICollectionVie
 //        cell.imageMovie.download(from: "https://image.tmdb.org/t/p/original/vbCjcID53aG5njDk9lZqCLLH0tu.jpg")
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "Detalhe", sender: list[indexPath.row])
     }
     
 }

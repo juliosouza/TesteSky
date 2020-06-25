@@ -22,6 +22,12 @@
 		F7FDB59B24A183380076EFB0 /* ListaFilmesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB59524A183380076EFB0 /* ListaFilmesInteractor.swift */; };
 		F7FDB59F24A4226C0076EFB0 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB59E24A4226C0076EFB0 /* MovieCollectionViewCell.swift */; };
 		F7FDB5A224A43CA40076EFB0 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB5A124A43CA40076EFB0 /* ImageView.swift */; };
+		F7FDB5A924A448550076EFB0 /* DetalhePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB5A324A448550076EFB0 /* DetalhePresenter.swift */; };
+		F7FDB5AA24A448550076EFB0 /* DetalheWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB5A424A448550076EFB0 /* DetalheWorker.swift */; };
+		F7FDB5AB24A448550076EFB0 /* DetalheRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB5A524A448550076EFB0 /* DetalheRouter.swift */; };
+		F7FDB5AC24A448550076EFB0 /* DetalheModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB5A624A448550076EFB0 /* DetalheModels.swift */; };
+		F7FDB5AD24A448550076EFB0 /* DetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB5A724A448550076EFB0 /* DetalheViewController.swift */; };
+		F7FDB5AE24A448550076EFB0 /* DetalheInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB5A824A448550076EFB0 /* DetalheInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,12 @@
 		F7FDB59524A183380076EFB0 /* ListaFilmesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaFilmesInteractor.swift; sourceTree = "<group>"; };
 		F7FDB59E24A4226C0076EFB0 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		F7FDB5A124A43CA40076EFB0 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		F7FDB5A324A448550076EFB0 /* DetalhePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhePresenter.swift; sourceTree = "<group>"; };
+		F7FDB5A424A448550076EFB0 /* DetalheWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheWorker.swift; sourceTree = "<group>"; };
+		F7FDB5A524A448550076EFB0 /* DetalheRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheRouter.swift; sourceTree = "<group>"; };
+		F7FDB5A624A448550076EFB0 /* DetalheModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheModels.swift; sourceTree = "<group>"; };
+		F7FDB5A724A448550076EFB0 /* DetalheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheViewController.swift; sourceTree = "<group>"; };
+		F7FDB5A824A448550076EFB0 /* DetalheInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,16 +134,22 @@
 			isa = PBXGroup;
 			children = (
 				F7FDB58F24A182F60076EFB0 /* Listagem */,
-				F7FDB59D24A1B8E90076EFB0 /* Detalhes */,
+				F7FDB59D24A1B8E90076EFB0 /* Detalhe */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		F7FDB59D24A1B8E90076EFB0 /* Detalhes */ = {
+		F7FDB59D24A1B8E90076EFB0 /* Detalhe */ = {
 			isa = PBXGroup;
 			children = (
+				F7FDB5A324A448550076EFB0 /* DetalhePresenter.swift */,
+				F7FDB5A424A448550076EFB0 /* DetalheWorker.swift */,
+				F7FDB5A524A448550076EFB0 /* DetalheRouter.swift */,
+				F7FDB5A624A448550076EFB0 /* DetalheModels.swift */,
+				F7FDB5A724A448550076EFB0 /* DetalheViewController.swift */,
+				F7FDB5A824A448550076EFB0 /* DetalheInteractor.swift */,
 			);
-			path = Detalhes;
+			path = Detalhe;
 			sourceTree = "<group>";
 		};
 		F7FDB5A024A43C920076EFB0 /* Extensions */ = {
@@ -218,13 +236,19 @@
 				F7FDB59724A183380076EFB0 /* ListaFilmesWorker.swift in Sources */,
 				F7FDB59A24A183380076EFB0 /* ListaFilmesViewController.swift in Sources */,
 				F7FDB58E24A151620076EFB0 /* Constants.swift in Sources */,
+				F7FDB5A924A448550076EFB0 /* DetalhePresenter.swift in Sources */,
 				F7FDB59924A183380076EFB0 /* ListaFilmesModels.swift in Sources */,
 				F7FDB58B24A150FB0076EFB0 /* ApiManager.swift in Sources */,
+				F7FDB5AE24A448550076EFB0 /* DetalheInteractor.swift in Sources */,
 				F7FDB57324A14F330076EFB0 /* AppDelegate.swift in Sources */,
+				F7FDB5AC24A448550076EFB0 /* DetalheModels.swift in Sources */,
+				F7FDB5AD24A448550076EFB0 /* DetalheViewController.swift in Sources */,
 				F7FDB59624A183380076EFB0 /* ListaFilmesPresenter.swift in Sources */,
 				F7FDB59F24A4226C0076EFB0 /* MovieCollectionViewCell.swift in Sources */,
+				F7FDB5AA24A448550076EFB0 /* DetalheWorker.swift in Sources */,
 				F7FDB59B24A183380076EFB0 /* ListaFilmesInteractor.swift in Sources */,
 				F7FDB57524A14F330076EFB0 /* SceneDelegate.swift in Sources */,
+				F7FDB5AB24A448550076EFB0 /* DetalheRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
