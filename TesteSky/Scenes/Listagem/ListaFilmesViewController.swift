@@ -19,6 +19,9 @@ protocol ListaFilmesDisplayLogic: class {
 class ListaFilmesViewController: UIViewController, ListaFilmesDisplayLogic {
     
     
+    @IBOutlet weak var collectionMovies: UICollectionView!
+    
+    
     var interactor: ListaFilmesBusinessLogic?
     var router: (NSObjectProtocol & ListaFilmesRoutingLogic & ListaFilmesDataPassing)?
     
@@ -84,12 +87,18 @@ class ListaFilmesViewController: UIViewController, ListaFilmesDisplayLogic {
     func exibirListaFilmes(response: ListaFilmes.Response) {
         print("chegou aqui no final")
         list = response
+        collectionMovies.reloadData()
     }
     
     
 }
 
-extension ListaFilmesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension ListaFilmesViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width  = (view.frame.width/2) - 25
+        return CGSize(width: width, height: 215)
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return list.count
@@ -100,14 +109,11 @@ extension ListaFilmesViewController: UICollectionViewDataSource, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! MovieCollectionViewCell
         
         cell.labelMovie.text = list[indexPath.row].title
-        
+        cell.imageMovie.layer.cornerRadius = 10
         
 //        let collection = list[indexPath.row]
         
         return cell
     }
-    
-    
-    
     
 }
