@@ -13,7 +13,6 @@
 import UIKit
 
 protocol DetalheDisplayLogic: class {
-    func displaySomething(viewModel: Detalhe.Something.ViewModel)
 }
 
 class DetalheViewController: UIViewController, DetalheDisplayLogic {
@@ -25,7 +24,10 @@ class DetalheViewController: UIViewController, DetalheDisplayLogic {
     
     // MARK - Outlets
     
-    @IBOutlet weak var imageMovieDetalhe: UIImageView!
+    @IBOutlet weak var titleMovieDetalhe: UILabel!
+    @IBOutlet weak var yearMovieDetalhe: UILabel!
+    @IBOutlet weak var durationMovieDetalhe: UILabel!
+    @IBOutlet weak var overviewMovieDetalhe: UILabel!
     
     
     // MARK: Object lifecycle
@@ -55,28 +57,69 @@ class DetalheViewController: UIViewController, DetalheDisplayLogic {
         router.dataStore = interactor
     }
     
-
-    
     var detalhe: ListaFilmes.Filme?
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     // MARK: View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(detalhe)
+        pageControl.numberOfPages = detalhe?.backdrops_url.count ?? 0
+        atualizarTela()
     }
     
-    // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    
-    func doSomething() {
-        let request = Detalhe.Something.Request()
-        interactor?.doSomething(request: request)
+    func atualizarTela() {
+        titleMovieDetalhe.text = detalhe?.title
+        yearMovieDetalhe.text = detalhe?.release_year
+        durationMovieDetalhe.text = detalhe?.duration
+        overviewMovieDetalhe.text = detalhe?.overview
     }
     
-    func displaySomething(viewModel: Detalhe.Something.ViewModel)
-    {
-        //nameTextField.text = viewModel.name
+}
+
+extension DetalheViewController:  UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 200)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return detalhe?.backdrops_url.count ?? 0
+    }
+    
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        let pageWidth = Float(view.frame.width)
+        let targetXContentOffset = Float(targetContentOffset.pointee.x)
+        let contentWidth = Float(collectionView!.contentSize.width  )
+        var newPage = Float(self.pageControl.currentPage)
+        
+        if velocity.x == 0 {
+            newPage = floor( (targetXContentOffset - Float(pageWidth) / 2) / Float(pageWidth)) + 1.0
+        } else {
+            newPage = Float(velocity.x > 0 ? self.pageControl.currentPage + 1 : self.pageControl.currentPage - 1)
+            if newPage < 0 {
+                newPage = 0
+            }
+            if (newPage > contentWidth / pageWidth) {
+                newPage = ceil(contentWidth / pageWidth) - 1.0
+            }
+        }
+        
+        self.pageControl.currentPage = Int(newPage)
+        let point = CGPoint (x: CGFloat(newPage * pageWidth), y: targetContentOffset.pointee.y)
+        targetContentOffset.pointee = point
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellIdDetalhe", for: indexPath) as! MovieDetalheCollectionViewCell
+        
+        cell.imageMovieDetalhe.contentMode = .scaleAspectFill
+        cell.imageMovieDetalhe.download(from: detalhe?.backdrops_url[indexPath.row] ?? "")
+        
+        return cell
+    }
+    
 }

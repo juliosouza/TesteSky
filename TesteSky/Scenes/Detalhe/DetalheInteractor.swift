@@ -14,7 +14,6 @@ import UIKit
 
 protocol DetalheBusinessLogic
 {
-  func doSomething(request: Detalhe.Something.Request)
 }
 
 protocol DetalheDataStore
@@ -30,12 +29,5 @@ class DetalheInteractor: DetalheBusinessLogic, DetalheDataStore
   
   // MARK: Do something
   
-  func doSomething(request: Detalhe.Something.Request)
-  {
-    worker = DetalheWorker()
-    worker?.doSomeWork()
-    
-    let response = Detalhe.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+
 }

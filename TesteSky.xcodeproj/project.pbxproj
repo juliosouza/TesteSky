@@ -28,6 +28,7 @@
 		F7FDB5AC24A448550076EFB0 /* DetalheModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB5A624A448550076EFB0 /* DetalheModels.swift */; };
 		F7FDB5AD24A448550076EFB0 /* DetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB5A724A448550076EFB0 /* DetalheViewController.swift */; };
 		F7FDB5AE24A448550076EFB0 /* DetalheInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB5A824A448550076EFB0 /* DetalheInteractor.swift */; };
+		F7FDB5B024A586630076EFB0 /* MovieDetalheCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FDB5AF24A586630076EFB0 /* MovieDetalheCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		F7FDB5A624A448550076EFB0 /* DetalheModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheModels.swift; sourceTree = "<group>"; };
 		F7FDB5A724A448550076EFB0 /* DetalheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheViewController.swift; sourceTree = "<group>"; };
 		F7FDB5A824A448550076EFB0 /* DetalheInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheInteractor.swift; sourceTree = "<group>"; };
+		F7FDB5AF24A586630076EFB0 /* MovieDetalheCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetalheCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				F7FDB5A624A448550076EFB0 /* DetalheModels.swift */,
 				F7FDB5A724A448550076EFB0 /* DetalheViewController.swift */,
 				F7FDB5A824A448550076EFB0 /* DetalheInteractor.swift */,
+				F7FDB5AF24A586630076EFB0 /* MovieDetalheCollectionViewCell.swift */,
 			);
 			path = Detalhe;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				F7FDB5A224A43CA40076EFB0 /* ImageView.swift in Sources */,
 				F7FDB59824A183380076EFB0 /* ListaFilmesRouter.swift in Sources */,
 				F7FDB59724A183380076EFB0 /* ListaFilmesWorker.swift in Sources */,
+				F7FDB5B024A586630076EFB0 /* MovieDetalheCollectionViewCell.swift in Sources */,
 				F7FDB59A24A183380076EFB0 /* ListaFilmesViewController.swift in Sources */,
 				F7FDB58E24A151620076EFB0 /* Constants.swift in Sources */,
 				F7FDB5A924A448550076EFB0 /* DetalhePresenter.swift in Sources */,

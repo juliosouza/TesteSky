@@ -14,18 +14,12 @@ import UIKit
 
 protocol DetalhePresentationLogic
 {
-  func presentSomething(response: Detalhe.Something.Response)
+  
 }
 
 class DetalhePresenter: DetalhePresentationLogic
 {
   weak var viewController: DetalheDisplayLogic?
   
-  // MARK: Do something
-  
-  func presentSomething(response: Detalhe.Something.Response)
-  {
-    let viewModel = Detalhe.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+
 }
