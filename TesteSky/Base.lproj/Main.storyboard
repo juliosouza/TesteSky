@@ -108,7 +108,7 @@
         <!--Detalhe-->
         <scene sceneID="chh-cj-xVz">
             <objects>
-                <viewController id="meJ-nJ-SVb" customClass="DetalheViewController" customModule="TesteSky" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetalheViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="meJ-nJ-SVb" customClass="DetalheViewController" customModule="TesteSky" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nbV-ga-hEM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
